@@ -24,10 +24,7 @@ If you wish (and it is recommended) you can easily set up a local instance of th
 on installing and running Jekyll.
 The website uses the master branch of the hep-sf.github.io repository.
 
-Despite this is not the recommended option, if you are not comfortable with Git
-and you only want to do simple changes, the GitHub web interface allows you to
-add and edit the files in your browser. In this case, you don't need to have a
-local check-out of your personal fork on GitHub.
+If you are not familiar with GitHub and Git, you can read our [survival kit](/github-beginners.html)!
 
 ### General structure of website content files
 All Markdown files of this site start with a section surrounded by `---`. This
@@ -46,15 +43,16 @@ other files in there. The navigation bar will be updated automatically.
 
 ### Adding an event
 
-Add a new file in `events/_posts` and follow the front-matter of the other files
-in there. The events page will be updated automatically. Please don't forget
-adding a startdate. Only this allows a proper ordering
+Add a new file in `events/_posts` and follow the *front-matter* (see above) of the other files
+in there. The [Events](http://hepsoftwarefoundation.org/events.html) page and the ``Upcoming Events`` sidebar will be updated automatically. 
 
-### Adding a job opening
+### Adding breaking news
 
-Add a new file in `jobs/_posts` and follow the front-matter of the other files
-in there. It is important to fill the field `open: true`. This field allows to
-only show positions that aren't filled yet.
+Add a new file in `news/_posts` and follow the front matter of the other files in there. The front page will
+get a new box with all information.
+
+Please don't forget adding an event ``startdate`` in the *front-matter*: this is used for ordering events **and** as the end date
+for adding the event in the ``Upcoming Events`` sidebar.
 
 ## Technical details
 
@@ -64,21 +62,24 @@ As of writing, this website contains the following page templates for wider usag
 
  * default - every page inherits from this
  * event - to be used for events
- * job - to be used for job postings
  * newsletter - to be used for news items
  * plain - to be used for standard contents
+ * main - the main page w/ boxes
 
 ### Menu bar and automatization
-The menu bar is defined in `default.html`, from which all page layouts inherit.
+The menu bar is defined in `_includes/navbar.ext`, from which all page layouts inherit.
 The layout is hard-coded except for the addition of working groups. A new post
 in the `workinggroups/_posts` directory automatically adds the group to the drop
 down menu `Working Groups`.
 
-### Side bar and automatization
-The side bar contains two dynamic blocks - *upcoming events* and *current job
-openings*. Both are filled with *[Liquid](https://github.com/Shopify/liquid/wiki)* snippets defined in `_includes`.
+### Main page automatization
+The main page contains three dynamic blocks:
 
-
+ * breaking news, triggered by writing an item in `news/_posts`
+ * a list of minutes
+ * a list of newsletters
+ 
+They are filled with *[Liquid](https://github.com/Shopify/liquid/wiki)* snippets.
 
 ## Useful references
 

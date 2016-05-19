@@ -30,6 +30,8 @@ We held various meetings to look at the existing build and packaging solutions
 | [16.6.2015](https://indico.cern.ch/event/402229/) | cmsBuild              |
 | [23.6.2015](https://indico.cern.ch/event/403790/) | SciSoft, Contractor   |
 | [4.11.2015](https://indico.cern.ch/event/457365/) | AliBuild              |
+| [18.11.2015](https://indico.cern.ch/event/462334/) | Conda                |
+| [10.02.2016](https://indico.cern.ch/event/484006/) | Spack                |
 
 During these meetings we looked at
 
@@ -40,12 +42,24 @@ During these meetings we looked at
   * [Nix](https://nixos.org/nix/)
   * Contractor
   * SciSoft
+  * [Conda](http://conda.pydata.org/docs/)
+  * [Spack](https://github.com/LLNL/spack) 
 
-and currently prepare a document summarizing our analysis.
+The summary of our analysis has been summarized in a [Technical note on Build Tools](/technical_notes.html)
+
+## Existing build recipes
+
+  * [cet-is](https://cdcvs.fnal.gov/redmine/projects/build-framework/repository)
+  * [cmsdist recipes](https://github.com/cmsbuild/cmsdist)
+  * [HEP-SPACK recipes](https://github.com/HEP-SF/hep-spack)
+  * [conda recipes by Daniela Remenska ](https://github.com/remenska/root-conda-recipes)
+  * [conda recipes by Brett Viren](https://github.com/brettviren/lbne-conda) (deprecated)
+  * [aliDist recipes](https://github.com/alisw/alidist)
+  * [LCGCMake recipes](https://gitlab.cern.ch/sft/lcgcmake)
+
 
 # Other resources
 
   * [HSF Organization on GitHub](https://github.com/HEP-SF)
   * [HSF cmaketools package ](https://github.com/HEP-SF/cmaketools)
-  * [Draft Technical Note on Build Tools](/technical_notes.html)
   * [Draft Technical Note on Platform Naming Conventions](/technical_notes.html)
